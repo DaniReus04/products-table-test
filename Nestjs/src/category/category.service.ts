@@ -11,8 +11,8 @@ export class CategoryService {
   ) {}
 
   async create(CreateCategoryDTO: CreateCategoryDTO): Promise<Category> {
-    const newProduct = new this.categoryModel(CreateCategoryDTO);
-    return newProduct.save();
+    const newCategory = new this.categoryModel(CreateCategoryDTO);
+    return newCategory.save();
   }
 
   async findAll(): Promise<Category[]> {
