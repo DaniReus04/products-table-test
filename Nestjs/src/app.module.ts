@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { MongooseModule } from '@nestjs/mongoose';
 
+const mongoUri = process.env.MONGO_URI;
+if (!mongoUri) {
+  throw new Error('MONGO_URI is not defined in the enviroment variables.');
+}
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [MongooseModule.forRoot(mongoUri)],
 })
 export class AppModule {}
