@@ -12,7 +12,7 @@ By leveraging Docker for local environment setup and Serverless Framework for La
 
 ## Frameworks/Libraries 📖
 
-- React 18 ⚛️
+- React 19 ⚛️
 - Typescript 🆒
 - Material UI 📘
 - Nest 11 🦁
