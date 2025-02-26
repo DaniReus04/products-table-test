@@ -1,0 +1,12 @@
+service: ecommerce-lambda
+provider:
+  name: aws
+  runtime: nodejs18.x
+  environment:
+    MONGO_URI: ${env:MONGO_URI}
+
+functions:
+  processOrders:
+    handler: handler.processOrders
+    events:
+      - schedule: rate(1 day)
